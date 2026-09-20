@@ -7,6 +7,10 @@ namespace gestione_spese_server
 {
     public class DataContext : DbContext
     {
+
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+        }
         public DataContext()
         {
             this.Database.EnsureCreated(); //Metodo che crea il database se non esiste
