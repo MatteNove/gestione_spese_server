@@ -6,9 +6,8 @@ using gestione_spese_server.DTOs;
 
 namespace gestione_spese_server.Interfacce
 {
-    internal interface IServiceUtente
+    public interface IServiceUtente
     {
-        //Task<List<ResponseUtente>> Utenti_GetAll();
         Task<ResponseUtente> Utente_GetById(int id);
     }
 }
