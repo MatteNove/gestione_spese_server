@@ -29,6 +29,7 @@ namespace gestione_spese_server.Mapper
                 return null;
             }
             ResponseUtente responseUtente = new ResponseUtente();
+            responseUtente.idUtente = utente.idUtente;
             responseUtente.nome = utente.nome;
             responseUtente.cognome = utente.cognome;
             responseUtente.dataNascita = utente.dataNascita;

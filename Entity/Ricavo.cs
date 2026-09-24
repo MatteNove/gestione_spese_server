@@ -10,7 +10,7 @@ namespace gestione_spese_server.Entity
     public class Ricavo
     {
         
-        [Key] [Required] public int idRicavi { get; set; }
+        [Key] [Required] public int idRicavo { get; set; }
 
         [Required] [Column(TypeName = "decimal(18,2)")] public double importo { get; set; }
 

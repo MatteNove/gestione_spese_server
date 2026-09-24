@@ -8,18 +8,18 @@ using gestione_spese_server.Interfacce;
 
 namespace gestione_spese_server.Service
 {
-    internal class ServiceUtente : IServiceUtente
+    public class ServiceUtente : IServiceUtente
     {
         private readonly DataContext _context;
-        private readonly MapperUtente _mapper;
+        private readonly IMapperUtente _mapper;
 
-        
-        public ServiceUtente(DataContext context, MapperUtente mapper)
+        private ServiceUtente(DataContext context, IMapperUtente mapper)
         {
             _context = context;
             _mapper = mapper;
         }
-        public async Task<ResponseUtente> Utente_GetById(int id)
+
+        public async Task<ResponseUtente> GetById(int id)
         {
             Utente utente = await _context.Utente.FindAsync(id);
             if (utente == null)
@@ -27,6 +27,44 @@ namespace gestione_spese_server.Service
                 return null;
             }
             return _mapper.toResponseUtente(utente);
+
+        }
+
+        public async Task<ResponseUtente> Create(RequestUtente requestUtente)
+        {
+            Utente utente = _mapper.toUtente(requestUtente);
+            _context.Utente.Add(utente);
+            await _context.SaveChangesAsync();
+            ResponseUtente responseUtente = _mapper.toResponseUtente(utente);
+            return responseUtente;
+
+        }
+
+        public async Task<ResponseUtente> Update(int id, RequestUtente requestUtente)
+        {
+            Utente utente = await _context.Utente.FindAsync(id);
+            if (utente == null)
+            {
+                return null;
+            }
+            utente.nome = requestUtente.nome;
+            utente.cognome = requestUtente.cognome;
+            utente.dataNascita = requestUtente.dataNascita;
+            await _context.SaveChangesAsync();
+            ResponseUtente responseUtente = _mapper.toResponseUtente(utente);
+            return responseUtente;
+        }
+
+        public async Task<bool> Delete(int id)
+        {
+            Utente utente = await _context.Utente.FindAsync(id);
+            if (utente == null)
+            {
+                return false;
+            }
+            _context.Utente.Remove(utente);
+            await _context.SaveChangesAsync();
+            return true;
 
         }
     }

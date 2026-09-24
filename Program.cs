@@ -15,6 +15,8 @@ builder.Services.AddDbContext<DataContext>(options =>options.UseSqlite(builder.C
 
 // 2. Registrazione dei Mapper (Singleton)
 builder.Services.AddSingleton<IMapperUtente, MapperUtente>();
+builder.Services.AddSingleton<IMapperRicavo, MapperRicavo>();
+
 
 // 3. Registrazione dei Service
 builder.Services.AddScoped<IServiceUtente, ServiceUtente>(); //Si mette Scoped e non Singleton perchè dipende dal DbContext che è Scoped, quindi non può essere Singleton altrimenti si rischia di avere un DbContext condiviso tra più richieste e questo non va bene

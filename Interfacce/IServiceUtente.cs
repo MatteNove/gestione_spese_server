@@ -8,6 +8,12 @@ namespace gestione_spese_server.Interfacce
 {
     public interface IServiceUtente
     {
-        Task<ResponseUtente> Utente_GetById(int id);
+        Task<ResponseUtente?> GetById(int id);
+
+        Task<ResponseUtente> Create(RequestUtente requestUtente);
+
+        Task<ResponseUtente?> Update(int id, RequestUtente requestUtente);
+
+        Task<bool> Delete(int id);
     }
 }
