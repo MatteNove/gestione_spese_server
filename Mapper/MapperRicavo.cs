@@ -20,6 +20,8 @@ namespace gestione_spese_server.Mapper
             ricavo.importo = requestRicavo.importo;
             ricavo.descrizione = requestRicavo.descrizione;
             ricavo.dataRicavo = requestRicavo.dataRicavo;
+            ricavo.idUtente = requestRicavo.UtenteId;
+            ricavo.idTipoRicavo = requestRicavo.idTipoRicavo;
             return ricavo;
 
         }
@@ -35,6 +37,8 @@ namespace gestione_spese_server.Mapper
             responseRicavo.importo = ricavo.importo;
             responseRicavo.descrizione = ricavo.descrizione;
             responseRicavo.dataRicavo = ricavo.dataRicavo;
+            responseRicavo.idUtente = ricavo.idUtente;
+            responseRicavo.idTipoRicavo = ricavo.idTipoRicavo;
             return responseRicavo;
         }
     }

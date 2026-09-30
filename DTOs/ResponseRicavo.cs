@@ -14,5 +14,9 @@ namespace gestione_spese_server.DTOs
 
         public DateOnly dataRicavo { get; set; }
 
+        public int idUtente { get; set; }
+
+        public int idTipoRicavo { get; set; }
+
     }
 }

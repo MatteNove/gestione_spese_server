@@ -64,6 +64,7 @@ namespace gestione_spese_server.Service
             ricavo.descrizione = requestRicavo.descrizione;
             ricavo.importo = requestRicavo.importo;
             ricavo.dataRicavo = requestRicavo.dataRicavo;
+            ricavo.idTipoRicavo = requestRicavo.idTipoRicavo;
             await _context.SaveChangesAsync();
             ResponseRicavo responseRicavo = _mapper.toResponseRicavo(ricavo);
             return responseRicavo;
