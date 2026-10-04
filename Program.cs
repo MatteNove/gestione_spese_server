@@ -17,12 +17,15 @@ builder.Services.AddDbContext<DataContext>(options =>options.UseSqlite(builder.C
 builder.Services.AddSingleton<IMapperUtente, MapperUtente>();
 builder.Services.AddSingleton<IMapperRicavo, MapperRicavo>();
 builder.Services.AddSingleton<IMapperTipoRicavo, MapperTipoRicavo>();
-
+builder.Services.AddSingleton<IMapperSpesa, MapperSpesa>();
+builder.Services.AddSingleton<IMapperTipoSpesa, MapperTipoSpesa>();
 
 // 3. Registrazione dei Service
 builder.Services.AddScoped<IServiceUtente, ServiceUtente>(); //Si mette Scoped e non Singleton perchè dipende dal DbContext che è Scoped, quindi non può essere Singleton altrimenti si rischia di avere un DbContext condiviso tra più richieste e questo non va bene
 builder.Services.AddScoped<IServiceRicavo, ServiceRicavo>();
 builder.Services.AddScoped<IServiceTipoRicavo, ServiceTipoRicavo>();
+builder.Services.AddScoped<IServiceSpesa, ServiceSpesa>();
+builder.Services.AddScoped<IServiceTipoSpesa, ServiceTipoSpesa>();
 
 builder.Services.AddOpenApi(); //Registrazione nel Container IoC di tutti i servizi interni della libreria OpenApi
 
