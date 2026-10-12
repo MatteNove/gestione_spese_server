@@ -27,6 +27,8 @@ builder.Services.AddScoped<IServiceTipoRicavo, ServiceTipoRicavo>();
 builder.Services.AddScoped<IServiceSpesa, ServiceSpesa>();
 builder.Services.AddScoped<IServiceTipoSpesa, ServiceTipoSpesa>();
 
+builder.Services.AddControllers();
+
 builder.Services.AddOpenApi(); //Registrazione nel Container IoC di tutti i servizi interni della libreria OpenApi
 
 var app = builder.Build(); //Prende tutto quello che ho messo in Builder e compila l'applicazione finale
@@ -36,10 +38,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi(); //Espone la rotta hhtp ://localhost:5000/openapi per visualizzare la documentazione OpenApi
 }
 
+app.MapControllers();
 app.UseHttpsRedirection(); //Abilita il redirect automatico da http a https
-app.UseAuthorization(); //Abilita il middleware per la gestione dell'autorizzazione
-
-app.MapControllers(); //Crea le rotte per i controller definiti nel progetto
 
 app.Run(); //Avvia l'applicazione e mette in ascolto le richieste http
 

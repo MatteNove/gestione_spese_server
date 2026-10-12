@@ -13,7 +13,7 @@ namespace gestione_spese_server.Service
         private readonly DataContext _context;
         private readonly IMapperUtente _mapper;
 
-        private ServiceUtente(DataContext context, IMapperUtente mapper)
+        public ServiceUtente(DataContext context, IMapperUtente mapper)
         {
             _context = context;
             _mapper = mapper;

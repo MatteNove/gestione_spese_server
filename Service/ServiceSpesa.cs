@@ -13,7 +13,7 @@ namespace gestione_spese_server.Service
         private readonly DataContext _context;
         private readonly IMapperSpesa _mapper;
 
-        private ServiceSpesa(DataContext _context, IMapperSpesa mapperSpesa)
+        public ServiceSpesa(DataContext _context, IMapperSpesa mapperSpesa)
         {
             this._context = _context;
             this._mapper = mapperSpesa;

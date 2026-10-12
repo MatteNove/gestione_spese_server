@@ -7,7 +7,7 @@ using gestione_spese_server.Entity;
 
 namespace gestione_spese_server.Interfacce
 {
-    internal interface IMapperTipoRicavo
+    public interface IMapperTipoRicavo
     {
         TipoRicavo toTipoRicavo(RequestTipoRicavo requestTipoRicavo);
         ResponseTipoRicavo toResponseTipoRicavo(TipoRicavo tipoRicavo);

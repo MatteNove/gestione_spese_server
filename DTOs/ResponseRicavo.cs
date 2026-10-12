@@ -4,7 +4,7 @@ using System.Text;
 
 namespace gestione_spese_server.DTOs
 {
-    internal class ResponseRicavo
+    public class ResponseRicavo
     {
         public int idRicavo { get; set; }
 

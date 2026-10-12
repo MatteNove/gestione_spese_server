@@ -15,7 +15,7 @@ namespace gestione_spese_server.Service
         private readonly DataContext _context;
         private readonly IMapperRicavo _mapper;
 
-        private ServiceRicavo(DataContext _context, IMapperRicavo mapperRicavo)
+        public ServiceRicavo(DataContext _context, IMapperRicavo mapperRicavo)
         {
             this._context = _context;
             this._mapper = mapperRicavo;

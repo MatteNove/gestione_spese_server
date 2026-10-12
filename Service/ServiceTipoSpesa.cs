@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore; 
 using gestione_spese_server.DTOs;
 using gestione_spese_server.Entity;
 using gestione_spese_server.Interfacce;

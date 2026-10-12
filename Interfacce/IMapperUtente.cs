@@ -6,7 +6,7 @@ using gestione_spese_server.Entity;
 
 namespace gestione_spese_server.Interfacce
 {
-    internal interface IMapperUtente
+    public interface IMapperUtente
     {
         Utente toUtente(RequestUtente requestUtente);
         ResponseUtente toResponseUtente(Utente utente);

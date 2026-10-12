@@ -4,7 +4,7 @@ using System.Text;
 
 namespace gestione_spese_server.DTOs
 {
-    internal class RequestRicavo
+    public class RequestRicavo
     {
         public double importo { get; set; }
 

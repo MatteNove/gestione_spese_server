@@ -6,7 +6,7 @@ using gestione_spese_server.Entity;
 
 namespace gestione_spese_server.Interfacce
 {
-    internal interface IMapperRicavo
+    public interface IMapperRicavo
     {
         Ricavo toRicavo(RequestRicavo requestRicavo);
 

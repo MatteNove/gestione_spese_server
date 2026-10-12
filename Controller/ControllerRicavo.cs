@@ -9,7 +9,7 @@ namespace gestione_spese_server.Controller
 {
     [ApiController]
     [Route("gestione_spese_server/ricavo")]
-    internal class ControllerRicavo : ControllerBase
+    public class ControllerRicavo : ControllerBase
     {
         private readonly IServiceRicavo _iserviceRicavo;
 

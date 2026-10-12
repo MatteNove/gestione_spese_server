@@ -13,7 +13,7 @@ namespace gestione_spese_server.Service
         private readonly DataContext _context;
         private readonly IMapperTipoRicavo _mapper;
 
-        private ServiceTipoRicavo(DataContext context, IMapperTipoRicavo mapper)
+        public ServiceTipoRicavo(DataContext context, IMapperTipoRicavo mapper)
         {
             this._context = context;
             this._mapper = mapper;

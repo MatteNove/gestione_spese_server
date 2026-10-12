@@ -10,7 +10,7 @@ namespace gestione_spese_server.Controller
 {
     [ApiController]
     [Route("gestione_spese_server/tipo_ricavo")]
-    internal class ControllerTipoRicavo : ControllerBase
+    public class ControllerTipoRicavo : ControllerBase
     {
         
     
