@@ -5,7 +5,7 @@ using System.Text;
 namespace gestione_spese_server.DTOs
 {
 
-    internal class ResponseSpesa
+    public class ResponseSpesa
     {
         public int idSpesa { get; set; }
 

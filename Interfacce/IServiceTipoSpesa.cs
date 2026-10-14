@@ -5,7 +5,7 @@ using gestione_spese_server.DTOs;
 
 namespace gestione_spese_server.Interfacce
 {
-    internal interface IServiceTipoSpesa
+    public interface IServiceTipoSpesa
     {
         public Task<List<ResponseTipoSpesa>> GetAll();
 

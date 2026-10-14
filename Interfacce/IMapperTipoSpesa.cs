@@ -6,7 +6,7 @@ using gestione_spese_server.Entity;
 
 namespace gestione_spese_server.Interfacce
 {
-    internal interface IMapperTipoSpesa
+    public interface IMapperTipoSpesa
     {
         TipoSpesa toTipoSpesa(RequestTipoSpesa requestTipoSpesa);
         ResponseTipoSpesa toResponseTipoSpesa(TipoSpesa tipoSpesa);

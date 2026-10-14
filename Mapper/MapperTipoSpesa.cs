@@ -7,7 +7,7 @@ using gestione_spese_server.Interfacce;
 
 namespace gestione_spese_server.Mapper
 {
-    internal class MapperTipoSpesa : IMapperTipoSpesa
+    public class MapperTipoSpesa : IMapperTipoSpesa
     {
         public TipoSpesa toTipoSpesa(RequestTipoSpesa requestTipoSpesa)
         {

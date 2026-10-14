@@ -8,12 +8,12 @@ using gestione_spese_server.Interfacce;
 
 namespace gestione_spese_server.Service
 {
-    internal class ServiceTipoSpesa : IServiceTipoSpesa
+    public class ServiceTipoSpesa : IServiceTipoSpesa
     {
         private readonly DataContext _context;
         private readonly IMapperTipoSpesa _mapper;
 
-        private ServiceTipoSpesa(DataContext context, IMapperTipoSpesa mapper)
+        public ServiceTipoSpesa(DataContext context, IMapperTipoSpesa mapper)
         {
             this._context = context;
             this._mapper = mapper;

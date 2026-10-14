@@ -8,7 +8,7 @@ namespace gestione_spese_server.Entity
 {
     public class TipoSpesa
     {
-        [Key][Required] public int idTipoSpesa { get; set; }
+        [Key][Required][Column("idTipoSpesa")] public int idTipoSpesa { get; set; }
         [Required][Column(TypeName = "nvarchar(50)")] public String nome { get; set; }
     }
 }

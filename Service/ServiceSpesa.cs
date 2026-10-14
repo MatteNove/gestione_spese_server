@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace gestione_spese_server.Service
 {
-    internal class ServiceSpesa : IServiceSpesa
+    public class ServiceSpesa : IServiceSpesa
     {
         private readonly DataContext _context;
         private readonly IMapperSpesa _mapper;

@@ -10,7 +10,7 @@ namespace gestione_spese_server.Controller
 {
     [ApiController]
     [Route("gestione_spese_server/spesa")]
-    internal class ControllerSpesa : ControllerBase
+    public class ControllerSpesa : ControllerBase
     {
         private readonly IServiceSpesa _iserviceSpesa;
 
